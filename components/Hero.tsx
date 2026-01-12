@@ -46,9 +46,9 @@ const Hero: React.FC = () => {
 
         <div className="relative animate-in zoom-in duration-1000">
           <div className="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl relative">
-            <img 
-              src="/images/micael01.png" 
-              alt="Micael Saturnino" 
+            <img
+              src="/images/micael01-opt.jpg"
+              alt="Micael Saturnino"
               className="w-full h-full object-cover"
             />
             <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/60 to-transparent">

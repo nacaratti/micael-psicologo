@@ -38,9 +38,9 @@ const Benefits: React.FC = () => {
             
             <div className="mt-12 relative z-10">
                <img 
-                 src="https://picsum.photos/seed/online/400/250" 
+                 src="\images\videocall.png" 
                  alt="Online Session" 
-                 className="rounded-2xl shadow-xl w-full object-cover aspect-video border-4 border-[#83C5BE]/20"
+                 className="rounded-2xl w-full object-cover aspect-video"
                />
             </div>
 
