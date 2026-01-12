@@ -27,7 +27,7 @@ const About: React.FC = () => {
           <div className="order-1 lg:order-2">
             <div className="aspect-[1.4/1] rounded-[2.5rem] overflow-hidden shadow-xl">
               <img 
-                src="https://picsum.photos/seed/office/1200/800" 
+                src="/images/micael02.png" 
                 alt="Psicólogo no consultório" 
                 className="w-full h-full object-cover"
               />

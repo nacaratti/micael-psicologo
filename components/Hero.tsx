@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
     <section id="home" className="pt-32 pb-20 md:pt-48 md:pb-32 bg-[#F8FBFC] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-8 animate-in slide-in-from-left duration-1000">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-[1.1]">
+          <h1 className="text-4xl md:text-6xl  text-gray-900 leading-[1.1]">
             Terapia online onde você estiver, com sessões seguras e flexíveis.
           </h1>
           <p className="text-lg text-gray-600 max-w-xl">
@@ -15,12 +15,12 @@ const Hero: React.FC = () => {
           </p>
           
           <div className="flex flex-wrap gap-4 pt-4">
-            <button className="bg-[#006D77] text-white px-8 py-4 rounded-full font-bold hover:shadow-lg transition-all flex items-center gap-2">
+            <a href="https://wa.me/5533984435353?text=Olá.%20Eu%20estou%20vendo%20o%20seu%20site%20e%20gostaria%20de%20tirar%20umas%20dúvidas." target="_blank" rel="noopener noreferrer" className="bg-[#006D77] text-white px-8 py-4 rounded-full font-bold hover:shadow-lg transition-all flex items-center gap-2">
               Contato <span className="text-xl">→</span>
-            </button>
-            <button className="border-2 border-gray-200 text-gray-800 px-8 py-4 rounded-full font-bold hover:bg-white hover:border-[#006D77] transition-all">
+            </a>
+            <a href="https://wa.me/5533984435353?text=Olá.%20Eu%20estou%20vendo%20o%20seu%20site%20e%20gostaria%20de%20tirar%20umas%20dúvidas." target="_blank" rel="noopener noreferrer" className="border-2 border-gray-200 text-gray-800 px-8 py-4 rounded-full font-bold hover:bg-white hover:border-[#006D77] transition-all">
               WhatsApp ↗
-            </button>
+            </a>
           </div>
 
           <div className="flex flex-wrap gap-8 pt-6">
@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
         <div className="relative animate-in zoom-in duration-1000">
           <div className="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl relative">
             <img 
-              src="https://picsum.photos/seed/psychologist/800/1000" 
+              src="/images/micael01.png" 
               alt="Micael Saturnino" 
               className="w-full h-full object-cover"
             />
