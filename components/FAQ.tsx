@@ -36,7 +36,7 @@ const FAQ: React.FC = () => {
     <section className="py-24 bg-[#F8FBFC]">
       <div className="max-w-3xl mx-auto px-6">
         <div className="text-center mb-16 space-y-4">
-          <span className="text-[#006D77] font-semibold tracking-wider text-sm uppercase">Perguntas frequentes</span>
+          <span className="text-[#006D77] font-semibold tracking-wider text-sm uppercase border-2 border-[#006D77] px-6 py-2 rounded-full inline-block">Perguntas frequentes</span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Respostas para suas perguntas</h2>
           <p className="text-gray-600">
             Aqui, você encontra respostas rápidas e claras sobre como funcionam meus serviços, agendamentos, e muito mais.

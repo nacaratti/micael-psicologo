@@ -55,7 +55,7 @@ const ContactForm: React.FC = () => {
     <section id="contact" className="py-24 bg-[#F8FBFC]">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-12 space-y-4">
-          <span className="text-[#006D77] font-semibold tracking-wider text-sm uppercase">Entre em Contato</span>
+          <span className="text-[#006D77] font-semibold tracking-wider text-sm uppercase border-2 border-[#006D77] px-6 py-2 rounded-full inline-block">Entre em Contato</span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 max-w-3xl mx-auto leading-tight">
             Pronto para dar o primeiro passo?
           </h2>

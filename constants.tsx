@@ -1,20 +1,21 @@
 
 import React from 'react';
-import { 
-  Clock, 
-  ShieldCheck, 
-  MapPin, 
-  Smartphone, 
-  CheckCircle, 
-  MessageCircle, 
-  Mail, 
+import {
+  Clock,
+  ShieldCheck,
+  MapPin,
+  Smartphone,
+  CheckCircle,
+  MessageCircle,
+  Mail,
   Phone,
   Smile,
   Frown,
   Ghost,
   Activity,
   UserPlus,
-  Heart
+  Heart,
+  RefreshCw
 } from 'lucide-react';
 import { BenefitItem, ServiceItem } from './types';
 
@@ -57,7 +58,7 @@ export const SERVICES: ServiceItem[] = [
     id: '1',
     title: 'Ansiedade',
     description: 'Sintomas como preocupação excessiva, tensão, insônia e medos persistentes. A terapia ajuda a compreender e lidar com essas emoções.',
-    icon: 'Activity'
+    icon: 'Shell'
   },
   {
     id: '2',
@@ -75,7 +76,7 @@ export const SERVICES: ServiceItem[] = [
     id: '4',
     title: 'TOC (Transtorno Obsessivo-Compulsivo)',
     description: 'Pensamentos repetitivos e rituais compulsivos podem causar sofrimento. A terapia busca abrir espaço para o sujeito além do sintoma.',
-    icon: 'Activity'
+    icon: 'Brain'
   },
   {
     id: '5',
@@ -87,6 +88,6 @@ export const SERVICES: ServiceItem[] = [
     id: '6',
     title: 'Baixa autoestima',
     description: 'Insegurança, autocrítica constante e dificuldade de reconhecer seu próprio valor. A terapia ajuda a fortalecer a relação consigo mesmo.',
-    icon: 'UserPlus'
+    icon: 'UserX'
   }
 ];
