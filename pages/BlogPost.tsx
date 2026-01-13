@@ -17,8 +17,8 @@ const BlogPost: React.FC = () => {
         <main className="pt-32 pb-20">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Post não encontrado</h1>
-            <Link to="/blogs" className="text-[#006D77] font-semibold hover:underline">
-              Voltar para blogs
+            <Link to="/" className="text-[#006D77] font-semibold hover:underline">
+              Voltar
             </Link>
           </div>
         </main>
@@ -35,11 +35,11 @@ const BlogPost: React.FC = () => {
       <main className="pt-32 pb-20">
         <article className="max-w-4xl mx-auto px-6">
           <Link
-            to="/blogs"
+            to="/"
             className="inline-flex items-center gap-2 text-[#006D77] font-semibold hover:gap-3 transition-all mb-8"
           >
             <ArrowLeft size={20} />
-            Voltar para blogs
+            Voltar
           </Link>
 
           <div className="space-y-6 mb-12">
@@ -70,11 +70,11 @@ const BlogPost: React.FC = () => {
 
           <div className="mt-16 pt-8 border-t border-gray-200">
             <Link
-              to="/blogs"
+              to="/"
               className="inline-flex items-center gap-2 text-[#006D77] font-semibold hover:gap-3 transition-all"
             >
               <ArrowLeft size={20} />
-              Voltar para blogs
+              Voltar
             </Link>
           </div>
         </article>
