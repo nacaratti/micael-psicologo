@@ -17,11 +17,7 @@ const About: React.FC = () => {
                 Ofereço horários flexíveis, adaptados à sua rotina, para tornar o acesso à terapia mais prático e possível no dia a dia. Comprometido com a qualidade do cuidado clínico, estou em constante aprimoramento por meio da participação em eventos, grupos de estudo e supervisão profissional, mantendo uma escuta qualificada e atualizada.
               </p>
             </div>
-            <div className="pt-4">
-               <button className="text-[#006D77] font-bold border-b-2 border-[#006D77] pb-1 hover:text-[#005f66] transition-colors">
-                 Saber mais sobre minha formação ↗
-               </button>
-            </div>
+            
           </div>
 
           <div className="order-1 lg:order-2">

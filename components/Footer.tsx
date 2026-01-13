@@ -16,12 +16,12 @@ const Footer: React.FC = () => {
               Agende um atendimento hoje mesmo e encontre um espaço de acolhimento e cuidado para o seu processo pessoal.
             </p>
             <div className="flex flex-wrap justify-center gap-4 pt-4">
-              <button className="bg-white text-[#006D77] px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all">
+              <a href="https://wa.me/5533984435353?text=Olá.%20Eu%20estou%20vendo%20o%20seu%20site%20e%20gostaria%20de%20tirar%20umas%20dúvidas." target="_blank" rel="noopener noreferrer" className="bg-white text-[#006D77] px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all">
                 Contato →
-              </button>
-              <button className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-bold hover:bg-white/10 transition-all">
+              </a>
+              <a href="https://wa.me/5533984435353?text=Olá.%20Eu%20estou%20vendo%20o%20seu%20site%20e%20gostaria%20de%20tirar%20umas%20dúvidas." target="_blank" rel="noopener noreferrer" className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-bold hover:bg-white/10 transition-all">
                 Agendar Atendimento ↗
-              </button>
+              </a>
             </div>
           </div>
           {/* Decorative Circles */}
