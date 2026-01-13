@@ -5,27 +5,27 @@ import { ChevronRight } from 'lucide-react';
 const QUESTIONS = [
   {
     question: "A terapia online é realmente sigilosa e confidencial?",
-    answer: "Sim, a terapia online segue os mesmos preceitos éticos da presencial, utilizando plataformas criptografadas que garantem o sigilo profissional."
+    answer: "Sim. A confidencialidade é a base da nossa profissão e é garantida pelo Código de Ética do Psicólogo. Utilizo plataformas seguras para as sessões e me comprometo a manter absoluto sigilo sobre tudo que é tratado."
   },
   {
     question: "Eu posso fazer a sessão de qualquer lugar?",
-    answer: "Sim, desde que você tenha acesso a uma internet estável e um local privativo onde se sinta confortável para falar livremente."
+    answer: "Sim, você pode fazer a sessão de onde estiver. A flexibilidade de local é uma das grandes vantagens do atendimento online. O mais importante é que o lugar seja seguro e privado para você."
   },
   {
     question: "Como devo me preparar para a sessão online?",
-    answer: "Recomenda-se o uso de fones de ouvido, estar em um local silencioso e garantir que seu dispositivo esteja carregado."
+    answer: "O ideal é que você se prepare encontrando um local tranquilo e privado, onde não será interrompido(a) e se sinta à vontade para falar com liberdade. Usar fones de ouvido pode ajudar muito a garantir a sua privacidade."
   },
   {
     question: "E se a minha conexão de internet cair no meio da sessão?",
-    answer: "Nós estabelecemos previamente um plano de contingência, podendo migrar para ligação telefônica ou reagendar a parte restante."
+    answer: "Imprevistos técnicos podem acontecer. Se a conexão falhar, nós faremos contato por telefone ou outra via alternativa previamente combinada para que a sessão seja concluída normalmente."
   },
   {
     question: "Posso começar a terapia online e depois passar para o formato presencial?",
-    answer: "Isso depende da disponibilidade de agenda no consultório físico, mas é uma transição comum e possível de ser negociada."
+    answer: "Sim. A transição de um formato para outro é possível e pode ser combinada entre nós, caso você sinta necessidade ou prefira continuar presencialmente."
   },
   {
     question: "A sessão tem um tempo de duração?",
-    answer: "Geralmente as sessões têm duração de 50 minutos, tempo padrão para o processo terapêutico."
+    answer: "As sessões têm uma duração média de 50 minutos, mas o tempo pode variar de acordo com o andamento de cada encontro. O mais importante é o processo que se desenvolve, e não a duração exata da sessão."
   }
 ];
 

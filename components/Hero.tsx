@@ -15,13 +15,125 @@ const Hero: React.FC = () => {
           </p>
           
           <div className="flex flex-wrap gap-4 pt-4">
-            <a href="https://wa.me/5533984435353?text=Olá.%20Eu%20estou%20vendo%20o%20seu%20site%20e%20gostaria%20de%20tirar%20umas%20dúvidas." target="_blank" rel="noopener noreferrer" className="bg-[#006D77] text-white px-8 py-4 rounded-full font-bold hover:shadow-lg transition-all flex items-center gap-2">
-              Contato <span className="text-xl">→</span>
+            <a href="https://wa.me/5533984435353?text=Olá.%20Eu%20estou%20vendo%20o%20seu%20site%20e%20gostaria%20de%20tirar%20umas%20dúvidas." target="_blank" rel="noopener noreferrer" className="relative bg-[#006D77] text-white px-8 py-4 rounded-full font-bold flex items-center gap-2 overflow-hidden cta-button">
+              <span className="relative z-10">Contato</span>
+              <span className="relative z-10 text-xl cta-arrow">→</span>
             </a>
-            <a href="https://wa.me/5533984435353?text=Olá.%20Eu%20estou%20vendo%20o%20seu%20site%20e%20gostaria%20de%20tirar%20umas%20dúvidas." target="_blank" rel="noopener noreferrer" className="border-2 border-gray-200 text-gray-800 px-8 py-4 rounded-full font-bold hover:bg-white hover:border-[#006D77] transition-all">
-              WhatsApp ↗
+            <a href="https://wa.me/5533984435353?text=Olá.%20Eu%20estou%20vendo%20o%20seu%20site%20e%20gostaria%20de%20tirar%20umas%20dúvidas." target="_blank" rel="noopener noreferrer" className="relative border-2 border-gray-200 bg-white text-gray-800 px-8 py-4 rounded-full font-bold flex items-center gap-2 overflow-hidden cta-button-white">
+              <span className="relative z-10">WhatsApp</span>
+              <span className="relative z-10 cta-arrow">↗</span>
             </a>
           </div>
+
+          <style jsx>{`
+            @keyframes pulse-glow {
+              0%, 100% {
+                box-shadow: 0 0 6px rgba(0, 109, 119, 0.3), 0 0 12px rgba(0, 109, 119, 0.15);
+              }
+              50% {
+                box-shadow: 0 0 10px rgba(0, 109, 119, 0.4), 0 0 18px rgba(0, 109, 119, 0.25);
+              }
+            }
+
+            @keyframes pulse-glow-white {
+              0%, 100% {
+                box-shadow: 0 0 4px rgba(200, 200, 200, 0.3), 0 0 8px rgba(200, 200, 200, 0.15);
+              }
+              50% {
+                box-shadow: 0 0 8px rgba(0, 109, 119, 0.3), 0 0 14px rgba(0, 109, 119, 0.2);
+              }
+            }
+
+            @keyframes arrow-in {
+              0% {
+                opacity: 0.6;
+                transform: translateX(-6px);
+              }
+              100% {
+                opacity: 1;
+                transform: translateX(0);
+              }
+            }
+
+            @keyframes shine {
+              0% {
+                left: -40%;
+              }
+              100% {
+                left: 140%;
+              }
+            }
+
+            .cta-button {
+              transition: all 0.3s ease;
+            }
+
+            .cta-button:hover {
+              animation: pulse-glow 2.5s infinite ease-in-out;
+            }
+
+            .cta-button::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: -40%;
+              width: 40%;
+              height: 100%;
+              background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+              z-index: 1;
+              opacity: 0;
+            }
+
+            .cta-button:hover::before {
+              animation: shine 1.0s ease-in-out;
+              opacity: 1;
+            }
+
+            .cta-button .cta-arrow {
+              opacity: 0.6;
+              transform: translateX(-6px);
+              transition: all 0.3s ease;
+            }
+
+            .cta-button:hover .cta-arrow {
+              animation: arrow-in 0.6s ease-in-out forwards;
+            }
+
+            .cta-button-white {
+              transition: all 0.3s ease;
+            }
+
+            .cta-button-white:hover {
+              animation: pulse-glow-white 2.5s infinite ease-in-out;
+            }
+
+            .cta-button-white::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: -40%;
+              width: 40%;
+              height: 100%;
+              background: linear-gradient(120deg, transparent, rgba(0, 109, 119, 0.2), transparent);
+              z-index: 1;
+              opacity: 0;
+            }
+
+            .cta-button-white:hover::before {
+              animation: shine 1.0s ease-in-out;
+              opacity: 1;
+            }
+
+            .cta-button-white .cta-arrow {
+              opacity: 0.6;
+              transform: translateX(-6px);
+              transition: all 0.3s ease;
+            }
+
+            .cta-button-white:hover .cta-arrow {
+              animation: arrow-in 0.6s ease-in-out forwards;
+            }
+          `}</style>
 
           <div className="flex flex-wrap gap-8 pt-6">
             <div className="flex items-center gap-3">
