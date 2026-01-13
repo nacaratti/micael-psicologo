@@ -4,7 +4,7 @@ import { blogPosts } from '../data/blogPosts';
 
 const Blog: React.FC = () => {
   return (
-    <section className="py-24 bg-white">
+    <section id="blogs" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16 space-y-4">
           <span className="text-[#006D77] font-semibold tracking-wider text-sm uppercase">Blogs</span>
@@ -12,11 +12,6 @@ const Blog: React.FC = () => {
           <p className="text-gray-600 max-w-2xl mx-auto">
             Explore reflexões, artigos e conteúdos sobre bem-estar emocional e desenvolvimento pessoal.
           </p>
-          <div className="pt-4">
-            <Link to="/blogs" className="text-gray-900 font-bold hover:text-[#006D77] transition-colors flex items-center gap-2 mx-auto">
-              Ver todos os blogs <span className="text-lg">↗</span>
-            </Link>
-          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

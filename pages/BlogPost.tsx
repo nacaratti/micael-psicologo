@@ -35,7 +35,7 @@ const BlogPost: React.FC = () => {
       <main className="pt-32 pb-20">
         <article className="max-w-4xl mx-auto px-6">
           <Link
-            to="/"
+            to="/#blogs"
             className="inline-flex items-center gap-2 text-[#006D77] font-semibold hover:gap-3 transition-all mb-8"
           >
             <ArrowLeft size={20} />
@@ -70,7 +70,7 @@ const BlogPost: React.FC = () => {
 
           <div className="mt-16 pt-8 border-t border-gray-200">
             <Link
-              to="/"
+              to="/#blogs"
               className="inline-flex items-center gap-2 text-[#006D77] font-semibold hover:gap-3 transition-all"
             >
               <ArrowLeft size={20} />

@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
           <div className="hidden lg:block"></div>
 
           <div className="space-y-8">
-            <h4 className="font-bold text-gray-900 text-lg">Address</h4>
+            <h4 className="font-bold text-gray-900 text-lg">Contatos</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-4 text-gray-600">
                 <div className="p-2 bg-[#EDF6F9] rounded-lg text-[#006D77]">
