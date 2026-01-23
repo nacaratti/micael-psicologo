@@ -65,7 +65,19 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="mt-20 pt-8 border-t border-gray-100 text-center text-xs text-gray-400">
-          <p>Feito com dedicação para sua saúde mental.</p>
+          <p></p>
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <a
+            href="https://naca-studio.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 text-xs text-gray-400 uppercase tracking-[0.3em] font-bold hover:text-gold transition-colors"
+          >
+            <span>Designed by</span>
+            <img src="/images/logo-naca.png" alt="Designer Logo" className="h-8 object-contain" />
+          </a>
         </div>
       </div>
     </footer>
