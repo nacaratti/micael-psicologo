@@ -162,6 +162,9 @@ const Hero: React.FC = () => {
               src="/images/micael.webp"
               alt="Micael Saturnino"
               className="w-full h-full object-cover"
+              fetchPriority="high"
+              loading="eager"
+              decoding="async"
             />
             <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/60 to-transparent">
               <p className="text-white/80 text-sm mb-1 uppercase tracking-widest font-medium">Psicólogo</p>

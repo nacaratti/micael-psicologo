@@ -9,7 +9,7 @@
     <!-- ===================== SEO BÁSICO ===================== -->
     <title>Psicólogo Clínico Online | Micael Saturnino | CRP-04/74923</title>
     <meta name="description" content="Psicólogo clínico com atendimento online e presencial. Sessões individuais com abordagem psicanalítica para jovens, adultos e idosos. Horários flexíveis. Agende pelo WhatsApp." />
-    <meta name="keywords" content="psicólogo online, psicólogo clínico, terapia online, psicanalise, saúde mental, Micael Saturnino, CRP 04/74923, psicólogo Minas Gerais, terapia individual, atendimento psicológico" />
+    <meta name="keywords" content="psicólogo online, psicólogo clínico, terapia, terapia online, terapia para ansiedade, terapia para depressão, terapia para problemas de relacionamento, ansiedade, depressão, problemas de relacionamento, psicanalise, saúde mental, Micael Saturnino, CRP 04/74923, psicólogo Minas Gerais, terapia individual, atendimento psicológico" />
     <meta name="author" content="Micael Saturnino" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://micaelsaturnino.com.br/" />
@@ -88,13 +88,19 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="Micael Saturnino" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Preconnect para reduzir latência do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Google Fonts carregado de forma não bloqueante -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" onload="this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" /></noscript>
+
+    <!-- Preload da imagem hero (LCP) para carregamento prioritário -->
+    <link rel="preload" as="image" href="/images/micael.webp" fetchpriority="high" />
+
+    <!-- Fonte de fallback enquanto a Inter carrega (evita FOUT) -->
     <style>
-      body {
-        font-family: 'Inter', sans-serif;
-        scroll-behavior: smooth;
-      }
+      body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
     </style>
   </head>
   <body>

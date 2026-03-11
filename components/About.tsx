@@ -26,6 +26,8 @@ const About: React.FC = () => {
                 src="/images/micael02.webp"
                 alt="Psicólogo no consultório"
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

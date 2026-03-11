@@ -1,7 +1,11 @@
 
 import React from 'react';
-import * as LucideIcons from 'lucide-react';
+import { Shell, Frown, Ghost, Brain, Heart, UserX, Activity } from 'lucide-react';
 import { SERVICES } from '../constants';
+
+const iconMap: Record<string, React.ElementType> = {
+  Shell, Frown, Ghost, Brain, Heart, UserX, Activity,
+};
 
 const Services: React.FC = () => {
   return (
@@ -16,7 +20,7 @@ const Services: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16 mt-20">
           {SERVICES.map((service) => {
-            const IconComponent = (LucideIcons as any)[service.icon] || LucideIcons.Activity;
+            const IconComponent = iconMap[service.icon] ?? Activity;
             return (
               <div key={service.id} className="flex gap-6 group">
                 <div className="flex-shrink-0 w-12 h-12 bg-[#EDF6F9] rounded-2xl flex items-center justify-center group-hover:bg-[#006D77] transition-all duration-300">
@@ -25,6 +29,8 @@ const Services: React.FC = () => {
                       src={service.customImage}
                       alt={service.title}
                       className="w-6 h-6 object-contain transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+                      loading="lazy"
+                      decoding="async"
                     />
                   ) : (
                     <IconComponent className="w-6 h-6 text-[#006D77] group-hover:text-white transition-colors" />

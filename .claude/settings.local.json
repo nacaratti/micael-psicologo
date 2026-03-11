@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"/c/Users/davin/OneDrive/micael-psicologo\" && npm run build 2>&1)"
+    ]
+  }
+}
