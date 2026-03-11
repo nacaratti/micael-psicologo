@@ -29,7 +29,7 @@ const Home: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      <main>
+      <main id="main-content">
         <Hero />
         <Benefits />
         <About />

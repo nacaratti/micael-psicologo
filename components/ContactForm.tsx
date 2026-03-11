@@ -79,6 +79,7 @@ const ContactForm: React.FC = () => {
                 required
                 className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-[#006D77] focus:outline-none transition-colors"
                 placeholder="seu@email.com"
+                autoComplete="email"
               />
             </div>
 
@@ -95,6 +96,7 @@ const ContactForm: React.FC = () => {
                 required
                 className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-[#006D77] focus:outline-none transition-colors"
                 placeholder="(00) 00000-0000"
+                autoComplete="tel"
               />
             </div>
 
@@ -115,13 +117,13 @@ const ContactForm: React.FC = () => {
             </div>
 
             {submitStatus === 'success' && (
-              <div className="bg-green-50 border-2 border-green-200 text-green-800 px-4 py-3 rounded-xl">
+              <div role="alert" className="bg-green-50 border-2 border-green-200 text-green-800 px-4 py-3 rounded-xl">
                 Mensagem enviada com sucesso! Entrarei em contato em breve.
               </div>
             )}
 
             {submitStatus === 'error' && (
-              <div className="bg-red-50 border-2 border-red-200 text-red-800 px-4 py-3 rounded-xl">
+              <div role="alert" className="bg-red-50 border-2 border-red-200 text-red-800 px-4 py-3 rounded-xl">
                 Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente.
               </div>
             )}
@@ -136,7 +138,7 @@ const ContactForm: React.FC = () => {
               ) : (
                 <>
                   Enviar Mensagem
-                  <Send className="w-5 h-5" />
+                  <Send className="w-5 h-5" aria-hidden="true" />
                 </>
               )}
             </button>

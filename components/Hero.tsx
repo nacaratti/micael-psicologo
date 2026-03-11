@@ -26,87 +26,10 @@ const Hero: React.FC = () => {
           </div>
 
           <style jsx>{`
-            @keyframes pulse-glow {
-              0%, 100% {
-                box-shadow: 0 0 6px rgba(0, 109, 119, 0.3), 0 0 12px rgba(0, 109, 119, 0.15);
-              }
-              50% {
-                box-shadow: 0 0 10px rgba(0, 109, 119, 0.4), 0 0 18px rgba(0, 109, 119, 0.25);
-              }
-            }
+            .cta-button { transition: all 0.3s ease; }
+            .cta-button-white { transition: all 0.3s ease; }
 
-            @keyframes pulse-glow-white {
-              0%, 100% {
-                box-shadow: 0 0 4px rgba(200, 200, 200, 0.3), 0 0 8px rgba(200, 200, 200, 0.15);
-              }
-              50% {
-                box-shadow: 0 0 8px rgba(0, 109, 119, 0.3), 0 0 14px rgba(0, 109, 119, 0.2);
-              }
-            }
-
-            @keyframes arrow-in {
-              0% {
-                opacity: 0.6;
-                transform: translateX(-6px);
-              }
-              100% {
-                opacity: 1;
-                transform: translateX(0);
-              }
-            }
-
-            @keyframes shine {
-              0% {
-                left: -40%;
-              }
-              100% {
-                left: 140%;
-              }
-            }
-
-            .cta-button {
-              transition: all 0.3s ease;
-            }
-
-            .cta-button:hover {
-              animation: pulse-glow 2.5s infinite ease-in-out;
-            }
-
-            .cta-button::before {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: -40%;
-              width: 40%;
-              height: 100%;
-              background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.5), transparent);
-              z-index: 1;
-              opacity: 0;
-            }
-
-            .cta-button:hover::before {
-              animation: shine 1.0s ease-in-out;
-              opacity: 1;
-            }
-
-            .cta-button .cta-arrow {
-              opacity: 0.6;
-              transform: translateX(-6px);
-              transition: all 0.3s ease;
-            }
-
-            .cta-button:hover .cta-arrow {
-              animation: arrow-in 0.6s ease-in-out forwards;
-            }
-
-            .cta-button-white {
-              transition: all 0.3s ease;
-            }
-
-            .cta-button-white:hover {
-              animation: pulse-glow-white 2.5s infinite ease-in-out;
-            }
-
+            .cta-button::before,
             .cta-button-white::before {
               content: "";
               position: absolute;
@@ -114,30 +37,56 @@ const Hero: React.FC = () => {
               left: -40%;
               width: 40%;
               height: 100%;
-              background: linear-gradient(120deg, transparent, rgba(0, 109, 119, 0.2), transparent);
               z-index: 1;
               opacity: 0;
             }
 
-            .cta-button-white:hover::before {
-              animation: shine 1.0s ease-in-out;
-              opacity: 1;
+            .cta-button::before {
+              background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.5), transparent);
             }
 
+            .cta-button-white::before {
+              background: linear-gradient(120deg, transparent, rgba(0, 109, 119, 0.2), transparent);
+            }
+
+            .cta-button .cta-arrow,
             .cta-button-white .cta-arrow {
               opacity: 0.6;
               transform: translateX(-6px);
               transition: all 0.3s ease;
             }
 
-            .cta-button-white:hover .cta-arrow {
-              animation: arrow-in 0.6s ease-in-out forwards;
+            @media (prefers-reduced-motion: no-preference) {
+              @keyframes pulse-glow {
+                0%, 100% { box-shadow: 0 0 6px rgba(0,109,119,.3), 0 0 12px rgba(0,109,119,.15); }
+                50%       { box-shadow: 0 0 10px rgba(0,109,119,.4), 0 0 18px rgba(0,109,119,.25); }
+              }
+              @keyframes pulse-glow-white {
+                0%, 100% { box-shadow: 0 0 4px rgba(200,200,200,.3), 0 0 8px rgba(200,200,200,.15); }
+                50%       { box-shadow: 0 0 8px rgba(0,109,119,.3), 0 0 14px rgba(0,109,119,.2); }
+              }
+              @keyframes arrow-in {
+                0%   { opacity: 0.6; transform: translateX(-6px); }
+                100% { opacity: 1;   transform: translateX(0); }
+              }
+              @keyframes shine {
+                0%   { left: -40%; }
+                100% { left: 140%; }
+              }
+
+              .cta-button:hover { animation: pulse-glow 2.5s infinite ease-in-out; }
+              .cta-button:hover::before { animation: shine 1.0s ease-in-out; opacity: 1; }
+              .cta-button:hover .cta-arrow { animation: arrow-in 0.6s ease-in-out forwards; }
+
+              .cta-button-white:hover { animation: pulse-glow-white 2.5s infinite ease-in-out; }
+              .cta-button-white:hover::before { animation: shine 1.0s ease-in-out; opacity: 1; }
+              .cta-button-white:hover .cta-arrow { animation: arrow-in 0.6s ease-in-out forwards; }
             }
           `}</style>
 
           <div className="flex flex-wrap gap-8 pt-6">
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-white rounded-full shadow-sm">
+              <div className="p-2 bg-white rounded-full shadow-sm" aria-hidden="true">
                 <ShieldCheck className="w-6 h-6 text-[#006D77]" />
               </div>
               <div>
@@ -146,7 +95,7 @@ const Hero: React.FC = () => {
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-white rounded-full shadow-sm">
+              <div className="p-2 bg-white rounded-full shadow-sm" aria-hidden="true">
                 <CheckCircle className="w-6 h-6 text-[#006D77]" />
               </div>
               <div>
@@ -172,8 +121,8 @@ const Hero: React.FC = () => {
             </div>
           </div>
           {/* Decorative element */}
-          <div className="absolute -top-6 -right-6 w-32 h-32 bg-[#83C5BE]/20 rounded-full blur-3xl -z-10"></div>
-          <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-[#006D77]/10 rounded-full blur-3xl -z-10"></div>
+          <div className="absolute -top-6 -right-6 w-32 h-32 bg-[#83C5BE]/20 rounded-full blur-3xl -z-10" aria-hidden="true"></div>
+          <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-[#006D77]/10 rounded-full blur-3xl -z-10" aria-hidden="true"></div>
         </div>
       </div>
     </section>

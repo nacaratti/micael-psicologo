@@ -33,7 +33,7 @@ const Services: React.FC = () => {
                       decoding="async"
                     />
                   ) : (
-                    <IconComponent className="w-6 h-6 text-[#006D77] group-hover:text-white transition-colors" />
+                    <IconComponent className="w-6 h-6 text-[#006D77] group-hover:text-white transition-colors" aria-hidden="true" />
                   )}
                 </div>
                 <div className="space-y-3">

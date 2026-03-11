@@ -17,41 +17,52 @@ const Navbar: React.FC = () => {
   return (
     <>
       <style jsx>{`
-        @keyframes pulse-glow {
-          0%, 100% {
-            box-shadow: 0 0 6px rgba(0, 109, 119, 0.3), 0 0 12px rgba(0, 109, 119, 0.15);
+        @media (prefers-reduced-motion: no-preference) {
+          @keyframes pulse-glow {
+            0%, 100% {
+              box-shadow: 0 0 6px rgba(0, 109, 119, 0.3), 0 0 12px rgba(0, 109, 119, 0.15);
+            }
+            50% {
+              box-shadow: 0 0 10px rgba(0, 109, 119, 0.4), 0 0 18px rgba(0, 109, 119, 0.25);
+            }
           }
-          50% {
-            box-shadow: 0 0 10px rgba(0, 109, 119, 0.4), 0 0 18px rgba(0, 109, 119, 0.25);
-          }
-        }
 
-        @keyframes arrow-in {
-          0% {
-            opacity: 0.6;
-            transform: translateX(-6px);
+          @keyframes arrow-in {
+            0% {
+              opacity: 0.6;
+              transform: translateX(-6px);
+            }
+            100% {
+              opacity: 1;
+              transform: translateX(0);
+            }
           }
-          100% {
+
+          @keyframes shine {
+            0% {
+              left: -40%;
+            }
+            100% {
+              left: 140%;
+            }
+          }
+
+          .cta-button:hover {
+            animation: pulse-glow 2.5s infinite ease-in-out;
+          }
+
+          .cta-button:hover::before {
+            animation: shine 1.5s ease-in-out;
             opacity: 1;
-            transform: translateX(0);
           }
-        }
 
-        @keyframes shine {
-          0% {
-            left: -40%;
-          }
-          100% {
-            left: 140%;
+          .cta-button:hover .cta-arrow {
+            animation: arrow-in 0.6s ease-in-out forwards;
           }
         }
 
         .cta-button {
           transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-          animation: pulse-glow 2.5s infinite ease-in-out;
         }
 
         .cta-button::before {
@@ -66,22 +77,16 @@ const Navbar: React.FC = () => {
           opacity: 0;
         }
 
-        .cta-button:hover::before {
-          animation: shine 1.5s ease-in-out;
-          opacity: 1;
-        }
-
         .cta-button .cta-arrow {
           opacity: 0.6;
           transform: translateX(-6px);
           transition: all 0.3s ease;
         }
-
-        .cta-button:hover .cta-arrow {
-          animation: arrow-in 0.6s ease-in-out forwards;
-        }
       `}</style>
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/30 backdrop-blur-lg border-b border-white/20 shadow-lg ${scrolled ? 'py-4' : 'py-6'}`}>
+    <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-white focus:text-[#006D77] focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold">
+      Pular para o conteúdo principal
+    </a>
+    <nav aria-label="Navegação principal" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/30 backdrop-blur-lg border-b border-white/20 shadow-lg ${scrolled ? 'py-4' : 'py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center gap-2">
           <span className="text-[#006D77] font-bold text-xl">+ Psicólogo Clínico</span>
@@ -99,14 +104,20 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Mobile Toggle */}
-        <button className="md:hidden text-[#006D77]" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        <button
+          className="md:hidden text-[#006D77]"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
+          aria-label={isOpen ? 'Fechar menu de navegação' : 'Abrir menu de navegação'}
+        >
+          {isOpen ? <X size={28} aria-hidden="true" /> : <Menu size={28} aria-hidden="true" />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-lg absolute top-full left-0 right-0 shadow-xl p-6 flex flex-col gap-6 animate-in slide-in-from-top duration-300">
+        <div id="mobile-menu" className="md:hidden bg-white/95 backdrop-blur-lg absolute top-full left-0 right-0 shadow-xl p-6 flex flex-col gap-6 animate-in slide-in-from-top duration-300">
           <a href="#home" onClick={() => setIsOpen(false)} className="text-gray-700 font-medium text-lg">Início</a>
           <a href="#about" onClick={() => setIsOpen(false)} className="text-gray-700 font-medium text-lg">Sobre</a>
           <a href="#services" onClick={() => setIsOpen(false)} className="text-gray-700 font-medium text-lg">Serviços</a>

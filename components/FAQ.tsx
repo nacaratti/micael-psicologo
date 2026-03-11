@@ -49,19 +49,27 @@ const FAQ: React.FC = () => {
               key={index} 
               className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-md transition-shadow"
             >
-              <button 
+              <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full p-6 flex items-center justify-between text-left group"
+                aria-expanded={openIndex === index}
+                aria-controls={`faq-answer-${index}`}
+                id={`faq-question-${index}`}
               >
                 <span className="font-semibold text-gray-800 group-hover:text-[#006D77] transition-colors">
                   {item.question}
                 </span>
-                <div className={`p-2 rounded-full bg-[#EDF6F9] text-[#006D77] transition-transform duration-300 ${openIndex === index ? 'rotate-90' : ''}`}>
+                <div className={`p-2 rounded-full bg-[#EDF6F9] text-[#006D77] transition-transform duration-300 ${openIndex === index ? 'rotate-90' : ''}`} aria-hidden="true">
                   <ChevronRight size={20} />
                 </div>
               </button>
               {openIndex === index && (
-                <div className="px-6 pb-6 text-gray-600 animate-in fade-in slide-in-from-top-2 duration-300">
+                <div
+                  id={`faq-answer-${index}`}
+                  role="region"
+                  aria-labelledby={`faq-question-${index}`}
+                  className="px-6 pb-6 text-gray-600 animate-in fade-in slide-in-from-top-2 duration-300"
+                >
                   <p>{item.answer}</p>
                 </div>
               )}

@@ -25,8 +25,8 @@ const Footer: React.FC = () => {
             </div>
           </div>
           {/* Decorative Circles */}
-          <div className="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full translate-x-1/3 translate-y-1/3"></div>
+          <div className="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2" aria-hidden="true"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full translate-x-1/3 translate-y-1/3" aria-hidden="true"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 items-start">
@@ -43,22 +43,22 @@ const Footer: React.FC = () => {
             <h4 className="font-bold text-gray-900 text-lg">Contatos</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-4 text-gray-600">
-                <div className="p-2 bg-[#EDF6F9] rounded-lg text-[#006D77]">
+                <div className="p-2 bg-[#EDF6F9] rounded-lg text-[#006D77]" aria-hidden="true">
                   <Mail size={18} />
                 </div>
-                <span>micael.s.saturnino@gmail.com</span>
+                <a href="mailto:micael.s.saturnino@gmail.com" className="hover:text-[#006D77] transition-colors">micael.s.saturnino@gmail.com</a>
               </li>
               <li className="flex items-start gap-4 text-gray-600">
-                <div className="p-2 bg-[#EDF6F9] rounded-lg text-[#006D77]">
+                <div className="p-2 bg-[#EDF6F9] rounded-lg text-[#006D77]" aria-hidden="true">
                   <Phone size={18} />
                 </div>
-                <span>+55 (33) 98443-5353</span>
+                <a href="tel:+5533984435353" className="hover:text-[#006D77] transition-colors">+55 (33) 98443-5353</a>
               </li>
               <li className="flex items-start gap-4 text-gray-600">
-                <div className="p-2 bg-[#EDF6F9] rounded-lg text-[#006D77]">
+                <div className="p-2 bg-[#EDF6F9] rounded-lg text-[#006D77]" aria-hidden="true">
                   <MapPin size={18} />
                 </div>
-                <span>Av. Jacob D Neto, 439, Sala 202, Centro, São João do Manhuaçu - MG</span>
+                <address className="not-italic">Av. Jacob D Neto, 439, Sala 202, Centro, São João do Manhuaçu - MG</address>
               </li>
             </ul>
           </div>
@@ -74,9 +74,10 @@ const Footer: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 text-xs text-gray-400 uppercase tracking-[0.3em] font-bold hover:text-gold transition-colors"
+            aria-label="Acesse o portfólio da Naca Studio — agência de design"
           >
-            <span>Designed by</span>
-            <img src="/images/logo-naca.png" alt="Designer Logo" className="h-8 object-contain" />
+            <span aria-hidden="true">Designed by</span>
+            <img src="/images/logo-naca.png" alt="Naca Studio — agência de design" className="h-8 object-contain" />
           </a>
         </div>
       </div>

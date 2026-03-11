@@ -31,7 +31,7 @@ const Benefits: React.FC = () => {
           {/* Featured Card */}
           <div className="bg-[#006D77] text-white p-10 rounded-[2.5rem] flex flex-col justify-between relative overflow-hidden group">
             <div className="space-y-6 relative z-10">
-              <span className="text-white/60 text-lg">→</span>
+              <span className="text-white/60 text-lg" aria-hidden="true">→</span>
               <h3 className="text-3xl font-bold leading-tight">Expressar-se ficou mais fácil.</h3>
               <p className="text-white/80">Terapia no seu ritmo, no seu espaço, com conforto e acolhimento.</p>
             </div>
@@ -39,7 +39,7 @@ const Benefits: React.FC = () => {
             <div className="mt-12 relative z-10">
                <img
                  src="/images/videocall.webp"
-                 alt="Online Session"
+                 alt="Sessão de psicoterapia online por videochamada"
                  className="rounded-2xl w-full object-cover aspect-video"
                  loading="lazy"
                  decoding="async"
@@ -47,7 +47,7 @@ const Benefits: React.FC = () => {
             </div>
 
             {/* Background Pattern */}
-            <div className="absolute top-0 right-0 p-4 opacity-10">
+            <div className="absolute top-0 right-0 p-4 opacity-10" aria-hidden="true">
                <div className="grid grid-cols-4 gap-2">
                  {[...Array(16)].map((_, i) => (
                    <div key={i} className="w-1.5 h-1.5 bg-white rounded-full"></div>

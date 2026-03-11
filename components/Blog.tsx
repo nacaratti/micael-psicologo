@@ -21,16 +21,18 @@ const Blog: React.FC = () => {
                 <div className="aspect-[4/3] rounded-3xl overflow-hidden mb-6">
                   <img
                     src={post.imageUrl}
-                    alt={post.title}
+                    alt={`Imagem ilustrativa do artigo: ${post.title}`}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-[#006D77] transition-colors leading-tight">
                   {post.title}
                 </h3>
                 <div className="flex items-center gap-4 text-sm text-gray-500">
-                  <span className="flex items-center gap-2">🗓 {post.date}</span>
-                  <span className="flex items-center gap-2">⏱ {post.readTime}</span>
+                  <span className="flex items-center gap-2"><span aria-label="Data de publicação">🗓</span> {post.date}</span>
+                  <span className="flex items-center gap-2"><span aria-label="Tempo de leitura">⏱</span> {post.readTime}</span>
                 </div>
               </article>
             </Link>
