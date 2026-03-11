@@ -38,7 +38,7 @@ const Benefits: React.FC = () => {
             
             <div className="mt-12 relative z-10">
                <img 
-                 src="\images\videocall.png" 
+                 src="\images\videocall.webp" 
                  alt="Online Session" 
                  className="rounded-2xl w-full object-cover aspect-video"
                />

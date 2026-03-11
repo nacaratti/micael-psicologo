@@ -159,7 +159,7 @@ const Hero: React.FC = () => {
         <div className="relative animate-in zoom-in duration-1000">
           <div className="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl relative">
             <img
-              src="/images/micael01-opt.jpg"
+              src="/images/micael.webp"
               alt="Micael Saturnino"
               className="w-full h-full object-cover"
             />
